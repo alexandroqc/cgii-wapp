@@ -1,11 +1,11 @@
 FROM node:10.13-alpine
-LABEL Author Carmine DiMascio <cdimascio@gmail.com>
+LABEL Alejandro Quisbert <alexandro@autistici.org>
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app
-RUN npm install
+RUN npm install && npm run compile
 
 EXPOSE 3000
 
