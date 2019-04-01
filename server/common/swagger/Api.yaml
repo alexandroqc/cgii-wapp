@@ -28,44 +28,44 @@ definitions:
         example: no_stress
 
 paths:
-  /examples:
-    get:
-      tags:
-        - Examples
-      description: Fetch all examples
-      responses:
-        200:
-          description: Returns all examples
-    post:
-      tags:
-        - Examples
-      description: Create a new example
-      parameters:
-        - name: example
-          in: body
-          description: an example
-          required: true
-          schema: 
-            $ref: "#/definitions/ExampleBody"
-      responses:
-        200:
-          description: Returns all examples
+  # /examples:
+  #   get:
+  #     tags:
+  #       - Examples
+  #     description: Fetch all examples
+  #     responses:
+  #       200:
+  #         description: Returns all examples
+  #   post:
+  #     tags:
+  #       - Examples
+  #     description: Create a new example
+  #     parameters:
+  #       - name: example
+  #         in: body
+  #         description: an example
+  #         required: true
+  #         schema: 
+  #           $ref: "#/definitions/ExampleBody"
+  #     responses:
+  #       200:
+  #         description: Returns all examples
 
-  /examples/{id}:
-    get:
-      tags:
-        - Examples
-      parameters:
-        - name: id
-          in: path
-          required: true
-          description: The id of the example to retrieve
-          type: integer
-      responses:
-        200:
-          description: Return the example with the specified id
-        404:
-          description: Example not found
+  # /examples/{id}:
+  #   get:
+  #     tags:
+  #       - Examples
+  #     parameters:
+  #       - name: id
+  #         in: path
+  #         required: true
+  #         description: The id of the example to retrieve
+  #         type: integer
+  #     responses:
+  #       200:
+  #         description: Return the example with the specified id
+  #       404:
+  #         description: Example not found
 
   /wapp/{uri}:
     get:
@@ -82,7 +82,7 @@ paths:
           type: string
       responses:
         200:
-          description: Return the example with the specified id
+          description: Returns Website data
         404:
           description: Website not found
 
